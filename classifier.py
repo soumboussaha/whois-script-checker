@@ -8,7 +8,7 @@ df = pd.read_csv(input_file)
 print("File Read")
 
 # Function to retrieve the owner name for a domain with retry mechanism
-@retry(stop_max_attempt_number=3, wait_fixed=2000)
+@retry(stop_max_attempt_number=3, wait_fixed=1000)
 def get_owner_name(domain):
     try:
         print(domain)
